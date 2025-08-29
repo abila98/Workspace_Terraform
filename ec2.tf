@@ -61,7 +61,7 @@ resource "aws_iam_instance_profile" "ec2_profile" {
 
 
 resource "aws_instance" "ec2" {
-  ami           = "ami-053c922634ebafe1e" # Amazon Linux 2 in ap-south-1, update per region
+  ami           = "ami-03550597cd1d38c24" # Amazon Linux 2 in ap-south-1, update per region
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.private.id
   #  key_name      = "your-keypair-name" # Replace with your EC2 keypair
