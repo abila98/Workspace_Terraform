@@ -93,6 +93,7 @@ resource "aws_instance" "ec2" {
   ami           = "ami-03261d758437926bb" # Amazon Linux 2 in ap-south-1, update per region
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.private.id
+  availability_zone = ap-south-1a
   #  key_name      = "your-keypair-name" # Replace with your EC2 keypair
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
