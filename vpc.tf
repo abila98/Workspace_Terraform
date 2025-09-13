@@ -22,6 +22,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.myvpc.id
   cidr_block = "100.0.1.0/24"
+  availability_zone = "ap-south-1a"
 
   tags = {
     Name = "Public Subnet"
@@ -53,7 +54,7 @@ resource "aws_route_table_association" "public_assoc" {
 resource "aws_subnet" "private" {
   vpc_id     = aws_vpc.myvpc.id
   cidr_block = "100.0.2.0/24"
-
+  availability_zone = "ap-south-1a"
   tags = {
     Name = "Private Subnet"
   }
